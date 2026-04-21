@@ -1,31 +1,71 @@
-<span class="price">۴۸۰,۰۰۰ تومان</span>
-                    <a href="#" class="btn">مشاهده و خرید</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-image">PREVIEW IMAGE</div>
-                <div class="card-content">
-                    <h3>پروژه شماره سه</h3>
-                    <p>پشتیبانی ۲۴ ساعته و قابلیت شخصی‌سازی کامل کدهای سایت.</p>
-                    <span class="price">۶۲۰,۰۰۰ تومان</span>
-                    <a href="#" class="btn">مشاهده و خرید</a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <footer>
-        <p>© ۲۰۲۶ تمامی حقوق محفوظ است</p>
-    </footer>
-
-</body>
-</html>
-color: #484f58;
-            border-top: 1px solid #30363d;
-            margin-top: 60px;
-            font-size: 14px;
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOWCASE STORE | Amir Mohammad</title>
+    <style>
+        body {
+            font-family: Tahoma, sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #161b22;
+            padding: 30px;
+            text-align: center;
+            border-bottom: 1px solid #30363d;
+        }
+        h1 { color: #58a6ff; margin: 0; }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 20px;
+        }
+        .card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .card:hover { border-color: #58a6ff; transform: translateY(-5px); }
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            background-color: #0d1117;
+        }
+        .price {
+            display: block;
+            color: #39d353;
+            font-size: 22px;
+            margin: 15px 0;
+            font-weight: bold;
+        }
+        .btn {
+            display: block;
+            background-color: #1f6feb;
+            color: white;
+            padding: 12px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+        .btn:hover { background-color: #388bfd; }
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #8b949e;
+            font-size: 13px;
         }
     </style>
 </head>
@@ -33,53 +73,37 @@ color: #484f58;
 
     <header>
         <h1>SHOWCASE STORE</h1>
-        <p>مجموعه نمونه کارها و محصولات دیجیتال شما</p>
+        <p>مجموعه نمونه کارها و محصولات دیجیتال امیر محمد</p>
     </header>
 
-    <div class="main-container">
-        <div class="grid">
-            
-            <div class="card">
-                <div class="card-image-container">
-                    <img src="https://raw.githubusercontent.com/amirmohammad201201/simple/main/demo-image.jpg" alt="پروژه یک" class="card-image">
-                </div>
-                <div class="card-content">
-                    <h3>پروژه شماره یک</h3>
-                    <p>توضیحات کوتاه و مفید درباره ویژگی‌ها یا خدمات اصلی این محصول.</p>
-                    <span class="price">۵۰۰,۰۰۰ تومان</span>
-                    <a href="https://t.me/MRAMIR247" class="btn">مشاهده و خرید</a>
-                </div>
-            </div>
+    <div class="container">
+        <div class="card">
+            <img src="https://raw.githubusercontent.com/amirmohammad201201/simple/main/demo-image.jpg" alt="طراحی لوگو">
+            <h3>طراحی لوگو اختصاصی</h3>
+            <p>طراحی لوگوهای حرفه‌ای و مدرن مطابق با سلیقه شما.</p>
+            <span class="price">۵۰۰,۰۰۰ تومان</span>
+            <a href="https://t.me/MRAMIR247" class="btn">سفارش در تلگرام</a>
+        </div>
 
-            <div class="card">
-                <div class="card-image-container">
-                    <img src="https://raw.githubusercontent.com/amirmohammad201201/simple/main/demo-image.jpg" alt="پروژه دو" class="card-image">
-                </div>
-                <div class="card-content">
-                    <h3>پروژه شماره دو</h3>
-                    <p>طراحی مدرن، کاملاً واکنش‌گرا و بهینه شده برای تجربه کاربری عالی.</p>
-                    <span class="price">۸۵۰,۰۰۰ تومان</span>
-                    <a href="https://t.me/MRAMIR247" class="btn">مشاهده و خرید</a>
-                </div>
-            </div>
+        <div class="card">
+            <img src="https://raw.githubusercontent.com/amirmohammad201201/simple/main/demo-image.jpg" alt="طراحی تامنیل">
+            <h3>طراحی تامنیل یوتیوب</h3>
+            <p>افزایش کلیک ویدیوها با تامنیل‌های جذاب و باکیفیت.</p>
+            <span class="price">۸۵۰,۰۰۰ تومان</span>
+            <a href="https://t.me/MRAMIR247" class="btn">سفارش در تلگرام</a>
+        </div>
 
-            <div class="card">
-                <div class="card-image-container">
-                    <img src="https://raw.githubusercontent.com/amirmohammad201201/simple/main/demo-image.jpg" alt="پروژه سه" class="card-image">
-                </div>
-                <div class="card-content">
-                    <h3>پروژه شماره سه</h3>
-                    <p>پشتیبانی دائمی و قابلیت شخصی‌سازی کامل مطابق با نیازهای شما.</p>
-                    <span class="price">۱,۵۰۰,۰۰۰ تومان</span>
-                    <a href="https://t.me/MRAMIR247" class="btn">مشاهده و خرید</a>
-                </div>
-            </div>
-
+        <div class="card">
+            <img src="https://raw.githubusercontent.com/amirmohammad201201/simple/main/demo-image.jpg" alt="برندینگ">
+            <h3>پکیج کامل برندینگ</h3>
+            <p>شامل طراحی لوگو، کارت ویزیت و بنرهای شبکه‌های اجتماعی.</p>
+            <span class="price">۱,۵۰۰,۰۰۰ تومان</span>
+            <a href="https://t.me/MRAMIR247" class="btn">سفارش در تلگرام</a>
         </div>
     </div>
 
     <footer>
-        <p>© ۲۰۲۶ تمامی حقوق برای این فروشگاه محفوظ است</p>
+        <p>© ۲۰۲۶ تمامی حقوق محفوظ است | طراحی شده برای </p>
     </footer>
 
 </body>
