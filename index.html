@@ -3,130 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>فروشگاه من | نمونه طراحی مدرن</title>
+    <title>فروشگاه مدرن من</title>
     <style>
-        /* استایل‌های کلی */
+        /* تنظیمات رنگ و فونت - استایل تیره و مدرن */
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-color: #38bdf8;
+            --text-color: #f8fafc;
+            --price-color: #10b981;
+        }
+
         body {
-            font-family: 'Tahoma', sans-serif;
-            background-color: #0f172a;
-            color: #f8fafc;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
             margin: 0;
-            padding: 0;
+            line-height: 1.6;
         }
 
-        /* هدر سایت */
+        /* هدر چسبان */
         header {
-            background: linear-gradient(90deg, #1e293b, #334155);
+            background-color: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(10px);
             padding: 20px;
             text-align: center;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #334155;
         }
 
-        h1 { margin: 0; font-size: 24px; color: #38bdf8; }
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+            color: var(--accent-color);
+            text-transform: uppercase;
+        }
 
-        /* بخش اصلی محصولات */
-        .container {
+        /* محفظه اصلی محصولات */
+        .main-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 40px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
 
-        /* کارت محصول */
-        .product-card {
-            background-color: #1e293b;
+        /* استایل کارت محصول */
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
             border: 1px solid #334155;
-            border-radius: 15px;
-            padding: 20px;
-            text-align: center;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
         }
 
-        .product-card:hover {
+        .card:hover {
             transform: translateY(-10px);
-            border-color: #38bdf8;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border-color: var(--accent-color);
         }
 
-        .product-image {
-            width: 100%;
-            height: 150px;
-            background-color: #334155;
-            border-radius: 10px;
-            margin-bottom: 15px;
+        .card-image {
+            height: 200px;
+            background: linear-gradient(45deg, #334155, #475569);
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 14px;
             color: #94a3b8;
         }
 
-        .price {
-            color: #10b981;
-            font-weight: bold;
-            font-size: 18px;
-            display: block;
+        .card-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-content h3 {
             margin: 10px 0;
+            font-size: 20px;
         }
 
-        /* دکمه خرید */
-        .buy-btn {
-            background-color: #38bdf8;
-            color: #0f172a;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-            cursor: pointer;
+        .price {
+            display: block;
+            font-size: 22px;
+            color: var(--price-color);
+            margin: 15px 0;
             font-weight: bold;
-            width: 100%;
-            transition: background 0.3s;
         }
 
-        .buy-btn:hover {
-            background-color: #0ea5e9;
+        /* دکمه اکشن */
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            padding: 12px 25px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: opacity 0.3s;
+            width: 80%;
         }
 
-        /* فوتر */
+        .btn:hover {
+            opacity: 0.9;
+        }
+
         footer {
             text-align: center;
-            padding: 20px;
-            font-size: 12px;
+            padding: 50px 20px;
             color: #64748b;
+            border-top: 1px solid #334155;
+            margin-top: 50px;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>فروشگاه آنلاین من</h1>
-        <p>بهترین محصولات با طراحی اختصاصی</p>
+        <h1>SHOWCASE STORE</h1>
+        <p>نمونه کارها و محصولات دیجیتال</p>
     </header>
 
-    <div class="container">
-        <div class="product-card">
-            <div class="product-image">تصویر محصول</div>
-            <h3>نام محصول اول</h3>
-            <span class="price">۵۰۰,۰۰۰ تومان</span>
-            <button class="buy-btn">افزودن به سبد خرید</button>
-        </div>
+    <div class="main-container">
+        <div class="grid">
+            
+            <div class="card">
+                <div class="card-image">PREVIEW IMAGE</div>
+                <div class="card-content">
+                    <h3>پروژه شماره یک</h3>
+                    <p>توضیحات کوتاه درباره ویژگی‌های این محصول یا خدمات شما.</p>
+                    <span class="price">۲۵۰,۰۰۰ تومان</span>
+                    <a href="#" class="btn">مشاهده و خرید</a>
+                </div>
+            </div>
 
-        <div class="product-card">
-            <div class="product-image">تصویر محصول</div>
-            <h3>نام محصول دوم</h3>
-            <span class="price">۷۵۰,۰۰۰ تومان</span>
-            <button class="buy-btn">افزودن به سبد خرید</button>
-        </div>
+            <div class="card">
+                <div class="card-image">PREVIEW IMAGE</div>
+                <div class="card-content">
+                    <h3>پروژه شماره دو</h3>
+                    <p>طراحی حرفه‌ای و کاملاً واکنش‌گرا برای تمام دستگاه‌ها.</p>
+                    <span class="price">۴۸۰,۰۰۰ تومان</span>
+                    <a href="#" class="btn">مشاهده و خرید</a>
+                </div>
+            </div>
 
-        <div class="product-card">
-            <div class="product-image">تصویر محصول</div>
-            <h3>نام محصول سوم</h3>
-            <span class="price">۱,۲۰۰,۰۰۰ تومان</span>
-            <button class="buy-btn">افزودن به سبد خرید</button>
+            <div class="card">
+                <div class="card-image">PREVIEW IMAGE</div>
+                <div class="card-content">
+                    <h3>پروژه شماره سه</h3>
+                    <p>پشتیبانی ۲۴ ساعته و قابلیت شخصی‌سازی کامل کدهای سایت.</p>
+                    <span class="price">۶۲۰,۰۰۰ تومان</span>
+                    <a href="#" class="btn">مشاهده و خرید</a>
+                </div>
+            </div>
+
         </div>
     </div>
 
     <footer>
-        طراحی شده با ❤️ برای سایت جدید
+        <p>© ۲۰۲۶ تمامی حقوق محفوظ است</p>
     </footer>
 
 </body>
