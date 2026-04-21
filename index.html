@@ -3,90 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PORTFOLIO</title>
+    <title>SHOWCASE STORE</title>
     <style>
+        /* تنظیمات رنگ و فونت (استایل تیره و مدرن) */
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --card-hover-border: #38bdf8;
+            --accent-color: #38bdf8;
+            --text-title: #f0f6fc;
+            --price-color: #34d399;
+        }
+
         body {
-            font-family: sans-serif;
-            background-color: #0d1117;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background-color: var(--bg-color);
             color: #c9d1d9;
             margin: 0;
-            padding: 0;
+            line-height: 1.6;
         }
+
+        /* هدر ثابت با افکت شیشه‌ای */
         header {
-            background-color: #161b22;
-            padding: 40px;
+            background-color: rgba(22, 27, 34, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 25px 20px;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
             border-bottom: 1px solid #30363d;
         }
-        h1 { color: #58a6ff; margin: 0; font-size: 32px; }
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 25px;
-            padding: 50px 20px;
+
+        header h1 {
+            margin: 0;
+            font-size: 30px;
+            color: var(--accent-color);
+            text-transform: uppercase;
         }
+
+        /* بخش اصلی محصولات */
+        .main-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* استایل کارت محصول */
         .card {
-            background-color: #161b22;
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
             border: 1px solid #30363d;
-            border-radius: 15px;
-            width: 320px;
-            padding: 25px;
-            text-align: center;
-            transition: 0.3s;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        .card:hover { 
-            border-color: #58a6ff; 
-            transform: translateY(-8px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+            border-color: var(--card-hover-border);
         }
-        .card img {
+
+        /* تصویر در کارت */
+        .card-image {
             width: 100%;
             height: 180px;
-            object-fit: cover;
-            border-radius: 10px;
-            background-color: #0d1117;
-            margin-bottom: 20px;
+            object-fit: cover; /* حفظ نسبت ابعاد و پر کردن فضا */
+            border-bottom: 1px solid #30363d;
         }
-        h3 { margin: 10px 0; font-size: 24px; color: #f0f6fc; }
-        .btn {
+
+        .card-content {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .card-content h3 {
+            margin: 0 0 10px 0;
+            font-size: 22px;
+            color: var(--text-title);
+        }
+
+        .price {
             display: block;
-            background-color: #1f6feb;
-            color: white;
-            padding: 12px;
-            text-decoration: none;
-            border-radius: 8px;
+            font-size: 24px;
+            color: var(--price-color);
+            margin: 20px 0;
             font-weight: bold;
-            margin-top: 20px;
         }
-        .btn:hover { background-color: #388bfd; }
+
+        /* دکمه اکشن (مثلاً لینک به تلگرام) */
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #0d1117;
+            padding: 12px 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.2s;
+            width: 80%;
+        }
+
+        .btn:hover {
+            background-color: #7dd3fc;
+        }
+
+        /* فوتر */
+        footer {
+            text-align: center;
+            padding: 50px 20px;
+            color: #484f58;
+            border-top: 1px solid #30363d;
+            margin-top: 50px;
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>SHOWCASE</h1>
+        <h1>SHOWCASE STORE</h1>
     </header>
 
-    <div class="container">
-        <div class="card">
-            <img src="https://via.placeholder.com/320x180/161b22/58a6ff?text=SITE+1" alt="سایت ۱">
-            <h3>سایت ۱</h3>
-            <a href="https://t.me/MRAMIR247" class="btn">سفارش</a>
-        </div>
+    <div class="main-container">
+        <div class="grid">
+            
+            <div class="card">
+                <img src="https://via.placeholder.com/320x180/161b22/38bdf8?text=PREVIEW+1" alt="سایت ۱" class="card-image">
+                <div class="card-content">
+                    <h3>سایت ۱</h3>
+                    <span class="price">۵۰۰,۰۰۰ تومان</span>
+                    <a href="https://t.me/MRAMIR247" class="btn">سفارش</a>
+                </div>
+            </div>
 
-        <div class="card">
-            <img src="https://via.placeholder.com/320x180/161b22/58a6ff?text=SITE+2" alt="سایت ۲">
-            <h3>سایت ۲</h3>
-            <a href="https://t.me/MRAMIR247" class="btn">سفارش</a>
-        </div>
+            <div class="card">
+                <img src="auto-magazine.jpg" alt="AUTO MAGAZINE" class="card-image">
+                <div class="card-content">
+                    <h3>سایت ۲</h3>
+                    <span class="price">۸۵۰,۰۰0 تومان</span>
+                    <a href="https://t.me/MRAMIR247" class="btn">سفارش</a>
+                </div>
+            </div>
 
-        <div class="card">
-            <img src="https://via.placeholder.com/320x180/161b22/58a6ff?text=SITE+3" alt="سایت ۳">
-            <h3>سایت ۳</h3>
-            <a href="https://t.me/MRAMIR247" class="btn">سفارش</a>
+            <div class="card">
+                <img src="https://via.placeholder.com/320x180/161b22/38bdf8?text=PREVIEW+3" alt="سایت ۳" class="card-image">
+                <div class="card-content">
+                    <h3>سایت ۳</h3>
+                    <span class="price">۱,۵۰۰,۰۰۰ تومان</span>
+                    <a href="https://t.me/MRAMIR247" class="btn">سفارش</a>
+                </div>
+            </div>
+
         </div>
     </div>
+
+    <footer>
+        <p>© ۲۰۲۶ تمامی حقوق محفوظ است</p>
+    </footer>
 
 </body>
 </html>
