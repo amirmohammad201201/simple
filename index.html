@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فروشگاه من | نمونه طراحی مدرن</title>
+    <style>
+        /* استایل‌های کلی */
+        body {
+            font-family: 'Tahoma', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* هدر سایت */
+        header {
+            background: linear-gradient(90deg, #1e293b, #334155);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 { margin: 0; font-size: 24px; color: #38bdf8; }
+
+        /* بخش اصلی محصولات */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* کارت محصول */
+        .product-card {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            border-color: #38bdf8;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 150px;
+            background-color: #334155;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #94a3b8;
+        }
+
+        .price {
+            color: #10b981;
+            font-weight: bold;
+            font-size: 18px;
+            display: block;
+            margin: 10px 0;
+        }
+
+        /* دکمه خرید */
+        .buy-btn {
+            background-color: #38bdf8;
+            color: #0f172a;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .buy-btn:hover {
+            background-color: #0ea5e9;
+        }
+
+        /* فوتر */
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>فروشگاه آنلاین من</h1>
+        <p>بهترین محصولات با طراحی اختصاصی</p>
+    </header>
+
+    <div class="container">
+        <div class="product-card">
+            <div class="product-image">تصویر محصول</div>
+            <h3>نام محصول اول</h3>
+            <span class="price">۵۰۰,۰۰۰ تومان</span>
+            <button class="buy-btn">افزودن به سبد خرید</button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">تصویر محصول</div>
+            <h3>نام محصول دوم</h3>
+            <span class="price">۷۵۰,۰۰۰ تومان</span>
+            <button class="buy-btn">افزودن به سبد خرید</button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">تصویر محصول</div>
+            <h3>نام محصول سوم</h3>
+            <span class="price">۱,۲۰۰,۰۰۰ تومان</span>
+            <button class="buy-btn">افزودن به سبد خرید</button>
+        </div>
+    </div>
+
+    <footer>
+        طراحی شده با ❤️ برای سایت جدید
+    </footer>
+
+</body>
+</html>
